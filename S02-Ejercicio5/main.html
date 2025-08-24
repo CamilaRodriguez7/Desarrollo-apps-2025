@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perception - Solution</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header id="main-header">
+        <nav class="navbar container">
+            <div class="nav-brand">
+                <span style="color: var(--accent-color); font-family: monospace;">(/ )</span>
+                Perception
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" data-page="home">Home</a></li>
+                <li class="nav-item"><a href="#tech" data-page="tech">Technologies</a></li>
+                <li class="nav-item"><a href="#solution" data-page="solution">Solution</a></li>
+                <li class="nav-item"><a href="#cases" data-page="cases">Cases</a></li>
+            </ul>
+            <button class="btn btn-primary" data-action="signup">Get Started</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" data-section="hero">
+            <div class="container">
+                <h1>Our Solution</h1>
+                <p class="hero-description">Comprehensive AI-powered perception platform for enterprise applications</p>
+                <button class="btn btn-secondary" data-action="demo">Try Demo</button>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section data-section="process" style="padding: 60px 0;">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="features-grid">
+                    <div class="feature-card" data-feature="step1">
+                        <h3>01. Data Ingestion</h3>
+                        <p>Collect and preprocess visual data from multiple sources with advanced algorithms</p>
+                    </div>
+                    <div class="feature-card" data-feature="step2">
+                        <h3>02. AI Analysis</h3>
+                        <p>Apply cutting-edge neural networks for intelligent pattern recognition</p>
+                    </div>
+                    <div class="feature-card" data-feature="step3">
+                        <h3>03. Smart Results</h3>
+                        <p>Generate actionable insights and accurate classifications in real-time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section data-section="cases" style="padding: 60px 0; background: var(--gray-light);">
+            <div class="container">
+                <h2 class="section-title">Use Cases</h2>
+                <div class="features-grid">
+                    <article class="feature-card" data-industry="healthcare">
+                        <h3>🏥 Healthcare</h3>
+                        <p>Medical image analysis for diagnostic assistance</p>
+                        <ul style="list-style: none; margin: 1rem 0;">
+                            <li data-feature="xray">✓ X-ray analysis</li>
+                            <li data-feature="mri">✓ MRI interpretation</li>
+                            <li data-feature="pathology">✓ Pathology detection</li>
+                        </ul>
+                        <span style="color: var(--accent-color); font-weight: bold;">95% Accuracy</span>
+                    </article>
+
+                    <article class="feature-card" data-industry="manufacturing">
+                        <h3>🏭 Manufacturing</h3>
+                        <p>Quality control and defect detection systems</p>
+                        <ul style="list-style: none; margin: 1rem 0;">
+                            <li data-feature="quality">✓ Quality inspection</li>
+                            <li data-feature="defects">✓ Defect detection</li>
+                            <li data-feature="automation">✓ Process automation</li>
+                        </ul>
+                        <span style="color: var(--accent-color); font-weight: bold;">99% Accuracy</span>
+                    </article>
+
+                    <article class="feature-card" data-industry="security">
+                        <h3>🛡️ Security</h3>
+                        <p>Advanced surveillance and threat detection</p>
+                        <ul style="list-style: none; margin: 1rem 0;">
+                            <li data-feature="facial">✓ Facial recognition</li>
+                            <li data-feature="behavior">✓ Behavior analysis</li>
+                            <li data-feature="alerts">✓ Smart alerts</li>
+                        </ul>
+                        <span style="color: var(--accent-color); font-weight: bold;">24/7 Monitoring</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section data-section="contact" style="padding: 60px 0;">
+            <div class="container">
+                <h2 class="section-title">Get Started Today</h2>
+                <form class="contact-form" data-form="contact">
+                    <div class="form-group" data-group="name">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group" data-group="email">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group" data-group="company">
+                        <label for="company" class="form-label">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Enter company name">
+                    </div>
+                    <div class="form-group" data-group="industry">
+                        <label for="industry" class="form-label">Industry</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Select your industry</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="security">Security</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group" data-group="message">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project" rows="4"></textarea>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary" data-action="submit">Send Message</button>
+                        <button type="reset" class="btn btn-secondary" data-action="reset" style="margin-left: 1rem;">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div class="nav-brand">
+                    <span style="color: var(--secondary-color); font-family: monospace;">(/ )</span>
+                    Perception
+                </div>
+                <nav>
+                    <a href="mailto:contact@perception.com" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">Contact</a>
+                    <a href="#privacy" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">Privacy</a>
+                    <a href="#terms" style="color: rgba(255,255,255,0.8);">Terms</a>
+                </nav>
+            </div>
+            <p style="color: rgba(255,255,255,0.6);">© 2024 Perception. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,437 @@
+/*******************************************************
+ARCHIVO : style.css
+FECHA : 2025
+DESCRIPCIÓN : Aplicando conceptos CSS de la guía
+********************************************************/
+
+/* ==================================================
+   VARIABLES Y RESET
+   ================================================== */
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #f5b692;
+    --accent-color: #ff6b4a;
+    --text-color: #333333;
+    --text-light: #666666;
+    --background-color: #ffffff;
+    --gray-light: #f8f9fa;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   SELECTORES POR NOMBRE
+   ================================================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition-fast);
+}
+
+input, select, textarea {
+    font-family: inherit;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+/* ==================================================
+   SELECTORES POR CLASE
+   ================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: var(--transition-normal);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.feature-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: var(--transition-normal);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* ==================================================
+   SELECTORES POR ID
+   ================================================== */
+#main-header {
+    background: white;
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#main-footer {
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* ==================================================
+   SELECTORES DE ATRIBUTOS
+   ================================================== */
+[data-industry] {
+    border-left: 4px solid var(--accent-color);
+}
+
+[data-feature] {
+    position: relative;
+}
+
+[href^="mailto:"] {
+    color: var(--accent-color);
+}
+
+[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Selectores regex */
+[class^="btn"] {
+    cursor: pointer;
+}
+
+[class$="card"] {
+    border-radius: 8px;
+}
+
+[class*="form"] {
+    display: block;
+}
+
+/* ==================================================
+   PSEUDO-CLASES (mínimo 10)
+   ================================================== */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus {
+    outline: 3px solid rgba(255,107,74,0.3);
+}
+
+a:visited {
+    color: inherit;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.feature-card:nth-child(odd) {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.feature-card:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.btn:not(.btn-secondary) {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group:empty {
+    display: none;
+}
+
+/* ==================================================
+   PSEUDO-ELEMENTOS (mínimo 7)
+   ================================================== */
+.section-title::first-letter {
+    font-size: 1.2em;
+    color: var(--accent-color);
+    font-weight: 800;
+}
+
+.hero-description::first-line {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: var(--transition-normal);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: #999;
+    opacity: 0.8;
+}
+
+::selection {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* ==================================================
+   SELECTORES COMBINADOS
+   ================================================== */
+
+/* Descendientes */
+.navbar ul li a {
+    padding: 0.5rem 1rem;
+}
+
+/* Hijos directos */
+.nav-menu > li {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+/* Hermanos adyacentes */
+h1 + p {
+    font-size: 1.2rem;
+    margin-top: var(--spacing-sm);
+}
+
+/* Hermanos generales */
+.section-title ~ p {
+    text-align: center;
+}
+
+/* ==================================================
+   SELECTORES MÚLTIPLES
+   ================================================== */
+h1, h2, h3, .section-title {
+    line-height: 1.2;
+}
+
+.btn, .form-input, input, select, textarea {
+    border-radius: 8px;
+}
+
+.navbar, .footer, .hero-section {
+    width: 100%;
+}
+
+/* ==================================================
+   UNIDADES DE MEDIDA
+   ================================================== */
+
+/* Absolutas */
+.precise-box {
+    width: 300px;
+    height: 200px;
+    margin: 1cm;
+    padding: 12pt;
+}
+
+/* Relativas */
+.responsive-text {
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin: 2ch 0;
+}
+
+/* Viewport */
+.full-width {
+    width: 100vw;
+    min-height: 50vh;
+}
+
+/* ==================================================
+   COLORES - Diferentes formatos
+   ================================================== */
+.color-name { color: crimson; }
+.color-hex { color: #ff6b4a; }
+.color-rgb { color: rgb(255, 107, 74); }
+.color-rgba { background: rgba(245, 182, 146, 0.8); }
+.color-hsl { color: hsl(12, 100%, 64%); }
+.color-hsla { background: hsla(25, 85%, 85%, 0.9); }
+
+/* ==================================================
+   LAYOUT ESPECÍFICO
+   ================================================== */
+body {
+    margin-top: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.main-content {
+    min-height: calc(100vh - 160px);
+}
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+@media screen and (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 { font-size: 2rem; }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
