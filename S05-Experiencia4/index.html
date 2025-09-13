@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Florería Pétalos Rosados</title>
+
+		<!-- Enlace al CSS de Bootstrap desde un CDN -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- Google Fonts para una tipografía más elegante -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Ahora enlazamos al archivo CSS que SASS va a generar -->
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<!-- 1. Barra de Navegación -->
+		<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+			<div class="container">
+				<a class="navbar-brand" href="#">Pétalos Rosados</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#servicios">Servicios</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#galeria">Galería</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#testimonios">Clientes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contacto">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- 2. Sección Principal "Hero" con botón que abre un Modal -->
+		<header class="hero-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<h1 class="display-4 mb-3">
+							Arreglos Florales para Cada Ocasión
+						</h1>
+						<p class="lead mb-4">
+							Diseñamos momentos inolvidables con las flores más frescas
+							y hermosas. Entrega a domicilio en toda la ciudad.
+						</p>
+						<button
+							type="button"
+							class="btn btn-principal"
+							data-bs-toggle="modal"
+							data-bs-target="#catalogoModal"
+						>
+							Ver Catálogo y Ofertas
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="container my-5">
+			<!-- 3. Sección de Servicios -->
+			<section id="servicios" class="py-5 text-center">
+				<p class="section-subtitle">NUESTROS SERVICIOS</p>
+				<h2 class="section-title mb-5">Por Qué Elegirnos</h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100 p-4">
+							<div class="card-body">
+								<h5 class="card-title">Flores Frescas del Día</h5>
+								<p class="card-text">
+									Seleccionamos las flores más frescas y de temporada
+									para garantizar la máxima calidad y duración.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100 p-4">
+							<div class="card-body">
+								<h5 class="card-title">Diseños Personalizados</h5>
+								<p class="card-text">
+									Creamos arreglos únicos para bodas, aniversarios,
+									eventos y cualquier momento especial.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100 p-4">
+							<div class="card-body">
+								<h5 class="card-title">Entrega a Domicilio</h5>
+								<p class="card-text">
+									Llevamos tus flores a la puerta que nos indiques con
+									un servicio puntual, cuidadoso y lleno de sonrisas.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 4. Sección de Galería con Carrusel -->
+			<section id="galeria" class="py-5">
+				<div class="text-center">
+					<p class="section-subtitle">NUESTRAS CREACIONES</p>
+					<h2 class="section-title mb-5">Galería de Arreglos</h2>
+				</div>
+				<div
+					id="carouselExampleCaptions"
+					class="carousel slide"
+					data-bs-ride="carousel"
+				>
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+						></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img
+								src="https://www.floreriasexpress.com.pe/web/image/product.template/1557/image_1024?unique=457dc6b"
+								class="d-block w-100"
+								alt="Ramo de Rosas Rosadas"
+								style="height: 500px; object-fit: cover"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Ramos de Rosas Clásicas</h5>
+								<p>
+									Perfectos para expresar amor y gratitud en cualquier
+									aniversario.
+								</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="https://i.etsystatic.com/17358183/r/il/9716fa/4277623138/il_570xN.4277623138_i91m.jpg"
+								class="d-block w-100"
+								alt="Arreglo con flores de primavera"
+								style="height: 500px; object-fit: cover"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Arreglos Primaverales</h5>
+								<p>
+									Una explosión de color y vida para alegrar cualquier
+									espacio.
+								</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="https://thumbs.dreamstime.com/b/flores-de-primavera-en-una-canasta-picnic-fresca-muestra-tulip%C3%A1n-e-jacinto-cesta-mimbre-descansando-sobre-hierba-al-sol-166609402.jpg"
+								class="d-block w-100"
+								alt="Canasta con flores surtidas"
+								style="height: 500px; object-fit: cover"
+							/>
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Canastas de Flores Silvestres</h5>
+								<p>
+									Un detalle rústico y encantador para un regalo
+									original.
+								</p>
+							</div>
+						</div>
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="prev"
+					>
+						<span
+							class="carousel-control-prev-icon"
+							aria-hidden="true"
+						></span
+						><span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleCaptions"
+						data-bs-slide="next"
+					>
+						<span
+							class="carousel-control-next-icon"
+							aria-hidden="true"
+						></span
+						><span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<!-- 5. Sección de Testimonios -->
+			<section
+				id="testimonios"
+				class="py-5 text-center"
+				style="background-color: white; border-radius: 20px"
+			>
+				<p class="section-subtitle">CLIENTES FELICES</p>
+				<h2 class="section-title mb-5">Lo que dicen de nosotros</h2>
+				<div class="row">
+					<div class="col-md-6 mb-4">
+						<div class="card border-0">
+							<div class="card-body">
+								<p class="fst-italic">
+									"¡El ramo para mi aniversario fue espectacular! Mi
+									esposa quedó encantada. La atención y la puntualidad
+									fueron de primera."
+								</p>
+								<h6 class="mt-3 mb-0 fw-bold">- Carlos V.</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 mb-4">
+						<div class="card border-0">
+							<div class="card-body">
+								<p class="fst-italic">
+									"Pedí un arreglo para el cumpleaños de mi mamá y
+									llegó perfecto. ¡Totalmente recomendados!"
+								</p>
+								<h6 class="mt-3 mb-0 fw-bold">- Ana Lucía G.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 6. Sección de Formulario de Contacto -->
+			<section id="contacto" class="py-5">
+				<div class="container">
+					<div class="text-center">
+						<p class="section-subtitle">HABLEMOS</p>
+						<h2 class="section-title mb-5">Ponte en Contacto</h2>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-8">
+							<div class="card p-4">
+								<form>
+									<div class="mb-3">
+										<label for="nombre" class="form-label"
+											>Tu Nombre</label
+										>
+										<input
+											type="text"
+											class="form-control"
+											id="nombre"
+											required
+										/>
+									</div>
+									<div class="mb-3">
+										<label for="email" class="form-label"
+											>Correo Electrónico</label
+										>
+										<input
+											type="email"
+											class="form-control"
+											id="email"
+											required
+										/>
+									</div>
+									<div class="mb-3">
+										<label for="mensaje" class="form-label"
+											>Mensaje</label
+										>
+										<textarea
+											class="form-control"
+											id="mensaje"
+											rows="4"
+											required
+										></textarea>
+									</div>
+									<div class="text-center">
+										<button type="submit" class="btn btn-principal">
+											Enviar Mensaje
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Modal del Catálogo -->
+		<div
+			class="modal fade"
+			id="catalogoModal"
+			tabindex="-1"
+			aria-labelledby="catalogoModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="catalogoModalLabel">
+							¡Oferta Especial de Temporada!
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">
+						<p>
+							Menciona el código <strong>FLOR25</strong> en tu próxima
+							compra y obtén un <strong>15% de descuento</strong> en
+							todos los arreglos de rosas.
+						</p>
+						<p>
+							¡No dejes pasar la oportunidad de regalar sonrisas! Nuestro
+							catálogo completo está disponible por WhatsApp.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Cerrar
+						</button>
+						<a href="#" class="btn btn-principal">Pedir por WhatsApp</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Pie de Página -->
+		<footer class="text-center text-dark p-4 mt-5">
+			<div class="container">
+				<p class="mb-0">
+					Pétalos Rosados &copy; 2025. Hecho con
+					<span class="heart">❤</span> y la pasión por las flores.
+				</p>
+			</div>
+		</footer>
+
+		<!-- Enlace al JS de Bootstrap para componentes interactivos -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
