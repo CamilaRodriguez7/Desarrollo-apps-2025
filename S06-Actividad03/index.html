@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Tabla React (CDN)</title>
+
+		<!-- Dependencias externas de React y ReactDOM -->
+		<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+		<!-- Babel se utiliza para compilar JSX en tiempo de ejecución -->
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+		<style>
+			/* Estilos generales para la presentación de la tabla */
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+			}
+			table {
+				border-collapse: collapse;
+				width: 450px;
+			}
+			th,
+			td {
+				border: 1px solid #ccc;
+				padding: 8px;
+			}
+			th {
+				background: #f2f2f2;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Implementación de la práctica en React -->
+		<script type="text/babel">
+			// Encabezado de la tabla
+			const TableHeader = () => (
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Job</th>
+					</tr>
+				</thead>
+			);
+
+			// Cuerpo de la tabla con datos dinámicos
+			const TableBody = (props) => {
+				const rows = props.characterData.map((row, index) => (
+					<tr key={index}>
+						<td>{row.name}</td>
+						<td>{row.job}</td>
+					</tr>
+				));
+				return <tbody>{rows}</tbody>;
+			};
+
+			// Componente principal de la tabla
+			class Table extends React.Component {
+				render() {
+					const { characterData } = this.props;
+					return (
+						<table>
+							<TableHeader />
+							<TableBody characterData={characterData} />
+						</table>
+					);
+				}
+			}
+
+			// Componente raíz de la aplicación
+			class App extends React.Component {
+				render() {
+					const characters = [
+						{ name: "Pepe", job: "Doctor" },
+						{ name: "Mario", job: "Abogado" },
+						{ name: "Denisse", job: "Actriz" },
+						{ name: "Pedro", job: "Ing. de Sistemas" },
+					];
+					return (
+						<div>
+							<h1>Mi primera tabla en React</h1>
+							<Table characterData={characters} />
+						</div>
+					);
+				}
+			}
+
+			// Renderizado en el nodo principal del DOM
+			ReactDOM.render(<App />, document.getElementById("root"));
+		</script>
+	</body>
+</html>
